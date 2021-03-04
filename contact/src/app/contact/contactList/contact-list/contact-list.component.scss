@@ -1,0 +1,16 @@
+@import "./../../../../assets/styles/colors.scss";
+
+.add-contact-icon{
+    float:right !important;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    
+}
+
+.icon-color{
+    color:$primary;
+    float:left;
+    cursor: pointer;
+    }
+
