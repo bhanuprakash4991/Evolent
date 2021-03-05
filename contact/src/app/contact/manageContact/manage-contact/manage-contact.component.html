@@ -1,6 +1,9 @@
 <mat-card-subtitle>
     <h3>
-      {{ config.title }}
+      <strong>
+        {{ config.title }}
+      </strong>
+      
     </h3>
   </mat-card-subtitle>
 
@@ -51,6 +54,14 @@
         />
       </div>
 
+      <div class="form-group">
+        <label for="status">Status</label>
+        <select class="form-control" id="status" name="status" [(ngModel)]="contact.status">
+          <option *ngFor="let statusObj of contactStatus" [value]="statusObj">{{statusObj}}</option>
+        </select>
+      </div>
+
       <button type="submit" class="btn btn-success" [disabled]="!contactForm.form.valid">Submit</button>
+      <button type="button" class="btn btn-default" (click) = "cancel()"  >cancel</button>
   </form>
 </mat-card-content>
