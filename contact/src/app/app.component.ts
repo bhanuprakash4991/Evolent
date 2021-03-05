@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Contact } from './modal/contact-model';
 import { ContactService } from './service/contact.service';
+import { environment } from './../environments/environment';
+
 
 @Component({
   selector: 'app-root',
@@ -19,7 +21,9 @@ export class AppComponent  {
   /***********************Properties*********** */
 
   /***********************Constructor*********** */
-  
+  constructor() {
+    console.log(environment.production); // Logs false for default environment
+  }
   /***********************Constructor*********** */
 
   /***********************Implementation Methods*********** */

@@ -16,6 +16,8 @@ export class ManageContactComponent implements OnInit {
     contactId: null,
   };
 
+  readonly contactStatus =['Active','Inactive'];
+
   contact: Contact = null;
 
 
@@ -26,7 +28,8 @@ export class ManageContactComponent implements OnInit {
 
   constructor(
     public contactService: ContactService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router:Router,
   ) {}
   /***********************Constructor****************/
   /**************Implementation Method****************/
@@ -34,6 +37,10 @@ export class ManageContactComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.config.contactId = params['contactId'];
+      if(this.config.contactId)
+      this.config.title = "Edit Contact";
+      else
+      this.config.title = "Add Contact";
     });
     this.getContactInformation(this.config.contactId);
   }
@@ -44,6 +51,10 @@ export class ManageContactComponent implements OnInit {
 
   onSubmit() {
     this.contactService.SaveContactInformation(this.contact);
+  }
+
+  cancel(){
+    this.router.navigateByUrl(contactRoutes.ContactList);
   }
 
   /**************Component Method****************/
