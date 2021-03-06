@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
+
 import { ManageContactComponent } from './contact/manageContact/manage-contact/manage-contact.component';
 import { ContactListComponent } from './contact/contactList/contact-list/contact-list.component';
 import { FormsModule } from '@angular/forms';
@@ -25,6 +26,7 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatTableModule,
     MatIconModule,
+    
     
   ],
   providers: [],
