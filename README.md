@@ -7,9 +7,26 @@ Watch a screencast at https://vimeo.com/520314490
 Fork, follow or download via https://github.com/bhanuprakash4991/Evolent
 
 # Requirements
- you need nodejs in your system to run this application in your system.
+<p align="left">
+ <img src="https://img.shields.io/badge/node-14.15.0-green.svg">
+ <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" >
+ <img src="https://img.shields.io/github/issues/silent-lad/Vue2BaremetricsCalendar.svg">
+ </p>
+
+## Project setup
+
+```
+npm install
+ng add @angular/material
+npm run serve
+```
+## Future scope
+
+- more feature going to be added.
+
+
  
-#
+
  
 
 
